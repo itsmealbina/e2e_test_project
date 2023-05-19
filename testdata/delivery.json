@@ -1,0 +1,10 @@
+{
+    "existing_user":{
+        "name": "Sheldon",
+        "surname": "Cooper",
+        "first_line_address": "2311 North Los Robles Avenue",
+        "city": "Pasadena",
+        "postcode": "91104",
+        "country": "United States"
+    }
+}

@@ -1,0 +1,14 @@
+__pycache__/
+
+.pytest_cache/
+.vscode/
+
+conftest.py
+pytest.ini
+
+tests/search.py
+
+chromedriver
+geckodriver
+
+screenshots/

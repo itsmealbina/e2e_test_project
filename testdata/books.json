@@ -1,0 +1,18 @@
+{
+    "book1":{
+        "price": "9,99 £",
+        "name": "The shellcoder's handbook",
+        "img_src": "http://selenium1py.pythonanywhere.com/media/cache/d5/c8/d5c8dcab443925f73b7f99c0292deb9b.jpg",
+        "img_src_full": "http://selenium1py.pythonanywhere.com/media/cache/c5/68/c568b32553f49c414b0c4a04eae9e607.jpg",
+        
+        "article": "9780764544682",
+        "product_type": "Book",
+        "price_with_vat": "9,99 £",
+        "price_without_vat": "9,99 £",
+        "tax": "0,00 £"
+    },
+    "book2":{
+        "price": "23,99 £",
+        "name": "Hacking Exposed Wireless"
+    }
+}
