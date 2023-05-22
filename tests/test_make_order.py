@@ -1,10 +1,3 @@
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-import time
-
-import sys
-sys.path.append("/Users/albina/Documents/e2e_test_project/")
-
 from pages.base_page import Base
 from pages.all_products_page import All_products_page
 from pages.book1_page import Book1
@@ -15,16 +8,9 @@ from pages.payment_page import Payment
 from pages.preview_page import Preview
 from pages.confirmation_page import Confirmation
 
-# browser = webdriver.Chrome(executable_path = '/Users/albina/Documents/e2e_test_project/geckodriver')
-ser = Service('/Users/albina/Documents/e2e_test_project/chromedriver')
-op = webdriver.ChromeOptions()
-browser = webdriver.Chrome(service=ser, options=op)
-
-browser.delete_all_cookies()
-browser.maximize_window()
 base_url = 'http://selenium1py.pythonanywhere.com/ru/'
 
-def test_buy_product_by_existing_user():
+def test_buy_product_by_existing_user(browser):
     page = Base(browser)
     page.open(base_url)
     page.check_link_name()
@@ -91,9 +77,9 @@ def test_buy_product_by_existing_user():
     preview.is_correct_url()
     preview.check_info_for_address()
     preview.check_delivery_info()
-    #preview.check_payment_info()
-    #preview.check_book_in_list()
-    #preview.check_total()
+    preview.check_payment_info()
+    preview.check_book_in_list()
+    preview.check_total()
     preview.place_order()
 
     confirm = Confirmation(browser)
@@ -103,9 +89,5 @@ def test_buy_product_by_existing_user():
     confirm.go_back_to_main_page()
 
     page.check_link_name()
-    
-    browser.quit()
 
-# закомментировано для прогона через pytest
-# для локального прогона - раскомментить
-# test_buy_choosen_product()
+
