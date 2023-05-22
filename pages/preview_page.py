@@ -81,7 +81,7 @@ class Preview(Base):
         assert name_actions == 'Действия после заказа', 'wrong name section for actions'
 
         promo_label = self.browser.find_element(*preview_page_locators.label_name).text
-        assert promo_label == 'Deferred benefit order'
+        assert promo_label == 'Deferred benefit offer'
 
         promo_message = self.browser.find_element(*preview_page_locators.label_description).text
         assert promo_message == 'You will have your name changed to Barry!'
