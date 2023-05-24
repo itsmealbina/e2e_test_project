@@ -1,7 +1,6 @@
 from pages.base_page import Base
 from pages.login_page import Login
 
-import time
 import json
 with open('./testdata/users.json') as data:
     users = json.load(data)
