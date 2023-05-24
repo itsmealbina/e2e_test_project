@@ -2,6 +2,12 @@ from selenium.webdriver.common.by import By
 
 
 class base_page_locators():
+    login_button = (By.XPATH, '//*[@id="login_link"]')
+    hello_message_section = (By.ID, 'messages')
+    hello_message_text = (By.XPATH, '//*[@id="messages"]/div/div')
+    account_link = (By.XPATH, '//*[@id="top_page"]/div[2]/div/ul/li[1]/a')
+    logout_link = (By.ID, 'logout_link')
+
     link_to_all_products = (By.XPATH, '//*[@id="browse"]/li/ul/li[1]/a')
 
 class all_products_page():
@@ -113,7 +119,10 @@ class confirmation_page_locators():
     continue_shopping_button = (By.XPATH, '//*[@id="default"]/div/div/div[8]/div/div[2]/p/a')
 
 class login_page_locators():
-    usrername = (By.ID, 'user-name')
-    password = (By.ID, 'password')
-    confirm_button = (By.ID, 'login-button')
+    username = (By.XPATH, '//input[@name="login-username"]')
+    password = (By.XPATH, '//input[@name="login-password"]')
+    login_button = (By.NAME, 'login_submit')
+    error_message_wrong_data = (By.XPATH, '//*[@id="login_form"]/div[1]')
+    error_message_input_correct = (By.XPATH, '//*[@id="login_form"]/div[2]')
+   
 
