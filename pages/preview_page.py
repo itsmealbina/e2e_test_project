@@ -60,11 +60,9 @@ class Preview(Base):
         assert bookname == item.get('book1').get('name'), 'wrong bookname'
 
         quantity = self.browser.find_element(*preview_page_locators.item_quantity).text
-        #print('\n' + quantity + '\n')
         assert quantity == '1', 'wrong quantity'
 
         total_price_item = self.browser.find_element(*preview_page_locators.total_item_price).text
-        #print('total_price_for_item: \n' + total_price_item + '\n')
         assert total_price_item == item.get('book1').get('price')
 
     def check_total(self):
